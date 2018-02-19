@@ -1,4 +1,4 @@
-#OPTIMIZACION CSS (UNCSS) CON DOCKER
+# OPTIMIZACION CSS (UNCSS) CON DOCKER
 
 UNCSS es una estupenda herramienta de Node,  que nos permite optimizar css, lee todos los archivos css de una pagina y crea uno nuevo solo con las clases que se están utilizando.
 
@@ -14,16 +14,16 @@ Primero construirmos la imagen docker con nombre para poder usarla desde cualqui
 
     docker build --no-cache -t myuncss .
 
-## arrancar el Contenedorhttps://github.com/uncss/uncss
+## Arrancar el Contenedor
 
 Nos dirigirnos a la carpeta donde tenemos el html y el css y arrancar
 
     docker run -it --rm --name=uncss -v $PWD:/home/node/app myuncss /bin/bash
 
-al ejecutar esta sentencia estamos dentro del contenedor ya podemos ejecutar Uncss.
+al ejecutar esta sentencia estamos dentro del contenedor ya podemos utilizar Uncss.
 
 ### UnCSS (optimizar)
 
-para eliminar css que no se usa del archivo login.html y crea el archivo login.css
+Para eliminar css que no se usa del archivo login.html y crea el archivo login.css
 
     uncss login.html > login.css
